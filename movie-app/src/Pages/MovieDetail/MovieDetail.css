@@ -1,0 +1,281 @@
+.main-detail {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.movie-detail {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 24px;
+  color: #ecfeff;
+}
+
+.center {
+  display: grid;
+  place-items: center;
+}
+
+.movie-detail header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.movie-detail header p {
+  font-size: 32px;
+  font-weight: 700;
+  width: 70%;
+}
+
+
+.add-favorite-remove .btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 16px;
+  width: 100%;
+}
+
+.back{
+  width: 45% !important;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  color: #67e8f9;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.back:hover{
+  color: #22d3ee;
+  transform: scale(1.1);
+}
+
+.mtIcon{
+  margin-top: 5px;
+}
+
+.add-favorite-remove .btn span:first-child {
+  display: flex;
+}
+
+.add-favorite-remove .add span:first-child svg {
+  color: #67e8f9;
+  transition: all 0.5s;
+}
+.add-favorite-remove .remove span:first-child svg {
+  color: #fca5a5;
+  transition: all 0.5s;
+}
+
+.add-favorite-remove .btn:hover span:first-child svg {
+  color: #000000;
+}
+
+.add-favorite-remove .btn span:last-child {
+  color: #ffffff;
+  transition: all 0.5s;
+  font-size: 16px;
+}
+
+.add-favorite-remove .btn:hover span:last-child {
+  color: #000000;
+}
+
+.btn {
+  background-color: transparent;
+  border: none;
+  padding: 15px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 0 2px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.3s;
+  outline: none;
+  width: 100%;
+}
+
+.movie-title {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+}
+
+.add {
+  box-shadow: 0 0 0 1px #67e8f9;
+}
+.add:hover {
+  background-color: #67e8f9;
+  color: #000000;
+}
+
+.remove {
+  box-shadow: 0 0 0 1px #fca5a5;
+}
+
+.remove:hover {
+  background-color: #fca5a5;
+  color: #000000;
+}
+
+.mt {
+  margin-top: 32px;
+}
+
+.movie-detail .movie-rating {
+  display: flex;
+  font-size: 20px;
+}
+
+.movie-detail .movie-rating svg {
+  color: #67e8f9;
+  padding-right: 5px;
+}
+
+.movie-detail .movie-rating p {
+  font-weight: 600;
+}
+
+.movie-detail .content {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.movie-detail .content .left {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.movie-detail .content .right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 10px 30px;
+}
+
+.right .movie-info .movie-genres,
+.movie-languages ul {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.right .release-date p {
+  font-size: 20px;
+}
+
+.right .movie-rating p {
+  font-size: 20px;
+}
+
+.movie-detail .content .right .release-date {
+  display: flex;
+}
+
+.movie-detail .content .right .movie-overview p {
+  font-size: 18px;
+  border-radius: 5px;
+  text-align: justify;
+  line-height: 22px;
+  letter-spacing: 1px;
+}
+
+.movie-detail .content .left .movie-backdrop_path {
+  width: 375px;
+  height: 325px;
+}
+
+.movie-detail .content .left .movie-backdrop_path img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+.noVideo{
+  margin-top: 50px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #67e8f9;
+
+}
+.video-item {
+  width: 375px;
+  height: 350px;
+  margin-top: 6px;
+}
+
+.video-item iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+}
+
+.movie-detail .movie-genres {
+  display: flex;
+}
+
+.movie-detail span {
+  padding-right: 5px;
+  color: #67e8f9;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.movie-detail .movie-genres ul {
+  display: flex;
+}
+
+.movie-detail .movie-genres ul li::after {
+  content: ",";
+  padding: 0 1rem 0 0;
+}
+
+.movie-detail .movie-genres ul li:last-child::after {
+  content: "";
+}
+
+.movie-detail .movie-languages ul li::after {
+  content: ",";
+  padding: 0 1rem 0 0;
+}
+
+.movie-detail .movie-languages ul li:last-child:after {
+  content: "";
+}
+
+.movie-detail .movie-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.movie-detail .movie-info .movie-languages {
+  display: flex;
+}

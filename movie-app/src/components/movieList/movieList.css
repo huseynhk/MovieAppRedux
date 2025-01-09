@@ -1,0 +1,105 @@
+.movie-list {
+  width: 85%;
+  padding-bottom: 30px;
+}
+
+.movie-list ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.centerDiv {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.mb{
+  margin-bottom: 22px;
+}
+
+.mt{
+  margin-top: 22px;
+}
+.centerDiv input {
+  padding: 9px 15px;
+  border-radius: 8px;
+  width: 400px;
+  border: 2px solid #a5f3fc;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  font-weight: 600;
+}
+@media (max-width: 1200px) {
+  .centerDiv input {
+    width: 300px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 768px) {
+  .centerDiv input {
+    width: 250px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .centerDiv input {
+    width: 200px;
+    font-size: 12px;
+  }
+}
+
+.centerDiv input:focus {
+  outline: none;
+  border-color: #38bdf8;
+  box-shadow: 0 0 8px #06b6d4;
+  background-color: #fff;
+}
+.centerDiv input::placeholder {
+  color: #94a3b8;
+  font-style: italic; 
+  transition: color 0.3s ease; 
+}
+
+.centerDiv input:focus::placeholder {
+  color: #0ea5e9; 
+}
+
+.centerDiv h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #67e8f9 ;
+}
+
+.movie-list .pagination-component {
+  display: flex;
+  justify-content: center;
+}
+
+.pagination-component .pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  border: none;
+}
+
+.pagination li {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s linear;
+  font-size: 22px;
+  border-radius: 50%;
+  border: 1px solid #67e8f9;
+  margin: 5px;
+}
+
+.pagination li:hover {
+  transform: scale(1.2);
+  color: #67e8f9;
+}

@@ -1,0 +1,77 @@
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 80px 20px 110px;
+}
+
+.navbar svg {
+    color: #67e8f9;
+}
+
+.navbar .left {
+    font-size: 32px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.navbar .left:hover a {
+    color: #22d3ee;
+}
+
+.navbar .left a {
+    transition: all .2s linear;
+    text-decoration: none;
+    color: #67e8f9;
+}
+
+.active-link svg {
+    color: #fecaca; 
+}
+
+
+.navbar .right ul {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.navbar .right ul li {
+    cursor: pointer;
+}
+.navbar .right li:first-child svg {
+    font-size: 38px;
+}
+.navbar .right ul li svg {
+    transition: all .2s linear;
+}
+.navbar .right ul li:hover svg {
+    transform: scale(1.2);
+    color: #22d3ee;
+}
+
+.navbar .right ul li:last-child svg {
+    font-size: 32px;
+}
+
+.navbar .right ul li:last-child {
+    position: relative;
+}
+
+.navbar .right ul li:last-child .favorite-count {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #67e8f9;
+    border-radius: 50%;
+    color: #67e8f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Roboto", sans-serif;
+    font-size: 10px;
+    z-index: 0;
+}

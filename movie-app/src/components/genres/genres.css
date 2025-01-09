@@ -1,0 +1,44 @@
+.genres {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: #67e8f9;
+    font-weight: 700;
+
+}
+
+.genres ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5vh;
+}
+
+.genres ul li {
+    cursor: pointer;
+    font-size: 14px;
+    transition: all .3s;
+    margin-bottom: 24px;
+}
+
+.genres ul li:hover {
+    color: #22d3ee;
+}
+
+.genres ul li.genre.active {
+    color: #fecaca;
+    transition: all .3s;
+}
+
+.selectedGenre{
+    color: #fecaca;
+}
+.reset{
+    color: #fecaca;
+    transition: all .3s;
+
+}
+.reset:hover {
+    color: #fca5a5 !important;
+}
