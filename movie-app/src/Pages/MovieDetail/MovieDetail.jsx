@@ -23,13 +23,9 @@ const MovieDetail = () => {
   const { videos, loading: videosLoading } = useSelector(
     (store) => store.movieVideos
   );
-  // const { title, vote_average, overview, genres, poster_path, spoken_languages, release_date} = movieDetail
-  const { title, vote_average, poster_path, backdrop_path } = movieDetail;
+  const { title, vote_average, poster_path } = movieDetail;
   const dispatch = useDispatch();
-
   const { movies } = useSelector((store) => store.favorite);
-
-  console.log("videos", videos);
 
   useEffect(() => {
     const isFavorite = movies?.find((movie) => movie.id == id);
@@ -92,16 +88,24 @@ const MovieDetail = () => {
                     <ReactLoading color="#67e8f9" height={"10%"} width={"5%"} />
                   ) : videos?.length > 0 ? (
                     <div className="video-list">
-                      {videos.slice(0, 1).map((video) => (
-                        <div key={video.id} className="video-item">
-                          <iframe
-                            src={`https://www.youtube.com/embed/${video.key}`}
-                            title={video.name}
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                          ></iframe>
-                        </div>
-                      ))}
+                      {(() => {
+                        const trailer = videos.find(
+                          (video) => video.type === "Trailer"
+                        );
+                        const videoToShow = trailer || videos[0]; // Prioritize Trailer, fallback to the first video
+                        return videoToShow ? (
+                          <div key={videoToShow.id} className="video-item">
+                            <iframe
+                              src={`https://www.youtube.com/embed/${videoToShow.key}`}
+                              title={videoToShow.name}
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                              allowFullScreen
+                            ></iframe>
+                          </div>
+                        ) : (
+                          <p className="noVideo">No videos available</p>
+                        );
+                      })()}
                     </div>
                   ) : (
                     <p className="noVideo">No videos available</p>
