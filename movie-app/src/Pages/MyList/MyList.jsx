@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import MovieCard from "../../components/movieCard/movieCard";
-import "./MyList.css";
 import ReactPaginate from "react-paginate";
 import { GrPrevious, GrNext } from "react-icons/gr";
+import "./MyList.css";
+
 
 const MyList = () => {
   const { movies } = useSelector((store) => store.favorite);

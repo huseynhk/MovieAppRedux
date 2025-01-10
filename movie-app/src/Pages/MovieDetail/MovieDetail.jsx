@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { FaStar } from "react-icons/fa6";
 import { FaHeart } from "react-icons/fa";
 import { IoIosRemoveCircle, IoMdArrowRoundBack } from "react-icons/io";
-import "./MovieDetail.css";
 import { getMovieById } from "../../redux/slices/movieDetailSlice";
 import { API_IMG } from "../../constants/api";
 import { addToFavorite } from "../../redux/slices/favoritesSlice";
@@ -12,6 +11,8 @@ import { removeFromFavorite } from "../../redux/slices/favoritesSlice";
 import { getMovieVideos } from "../../redux/slices/videoSlice";
 import { useNavigate } from "react-router-dom";
 import ReactLoading from "react-loading";
+import { toast } from "react-toastify";
+import "./MovieDetail.css";
 
 const MovieDetail = () => {
   const { id } = useParams();
@@ -51,6 +52,9 @@ const MovieDetail = () => {
       poster_path,
     };
     dispatch(addToFavorite(payload));
+    toast.success("Movie added successfully!", {
+      autoClose: 1250,
+    });
   };
 
   const removeFavorite = () => {
@@ -58,6 +62,9 @@ const MovieDetail = () => {
       id,
     };
     dispatch(removeFromFavorite(payload));
+    toast.info("Movie removed successfully!", {
+      autoClose: 1250,
+    });
   };
 
   return (
@@ -92,7 +99,7 @@ const MovieDetail = () => {
                         const trailer = videos.find(
                           (video) => video.type === "Trailer"
                         );
-                        const videoToShow = trailer || videos[0]; // Prioritize Trailer, fallback to the first video
+                        const videoToShow = trailer || videos[0];
                         return videoToShow ? (
                           <div key={videoToShow.id} className="video-item">
                             <iframe
@@ -134,9 +141,11 @@ const MovieDetail = () => {
                     <span>Genre: </span>
                     <ul>
                       {movieDetail.genres &&
-                        movieDetail.genres.map((genre) => (
+                        movieDetail?.genres?.map((genre) => (
                           <li key={genre?.id} className="movie-genre">
-                            {genre?.name}
+                            {genre?.name === "Science Fiction"
+                              ? "S.Fiction"
+                              : genre?.name}
                           </li>
                         ))}
                     </ul>
@@ -146,24 +155,26 @@ const MovieDetail = () => {
                     <span>Lang: </span>
                     <ul>
                       {movieDetail?.spoken_languages &&
-                        movieDetail?.spoken_languages.map((language, index) => (
-                          <li key={index}>{language?.english_name}</li>
-                        ))}
+                        movieDetail?.spoken_languages
+                          ?.slice(0, 3)
+                          .map((language, index) => (
+                            <li key={index}>{language?.english_name}</li>
+                          ))}
                     </ul>
                   </div>
                   <header>
                     <div className="add-favorite-remove">
                       {isFavorite ? (
                         <button onClick={removeFavorite} className="btn remove">
-                          <span>
-                            <IoIosRemoveCircle />
+                          <span className="icon">
+                            <IoIosRemoveCircle className="ic" />
                           </span>
                           <span>Remove WatchList</span>
                         </button>
                       ) : (
                         <button onClick={addFavorite} className="btn add">
-                          <span>
-                            <FaHeart />
+                          <span className="icon">
+                            <FaHeart className="ic"/>
                           </span>
                           <span>Add WatchList</span>
                         </button>

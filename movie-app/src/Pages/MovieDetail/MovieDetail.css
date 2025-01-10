@@ -45,11 +45,16 @@
 .add-favorite-remove .btn {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   margin-top: 16px;
   width: 100%;
 }
 
+
+.btn .icon .ic {
+  font-size: 28px;
+  margin-right: 4px;
+}
 .back {
   width: 45% !important;
   display: flex;
@@ -250,7 +255,9 @@
 }
 @media (max-width: 800px) {
   .movie-detail .content .right .movie-overview p {
-    font-size: 13px;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    text-align: left;
   }
 }
 .movie-detail .content .left .movie-backdrop_path {
@@ -326,7 +333,7 @@
 
 .movie-detail .movie-languages ul li::after {
   content: ",";
-  padding: 0 1rem 0 0;
+  padding: 0 8px 0 0;
 }
 
 .movie-detail .movie-languages ul li:last-child:after {

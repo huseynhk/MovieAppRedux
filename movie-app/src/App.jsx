@@ -7,6 +7,8 @@ import MyList from "./Pages/MyList/MyList";
 import MovieDetail from "./Pages/MovieDetail/MovieDetail";
 import { Route, Routes } from "react-router-dom";
 import { HOME, MY_LIST, MOVIE_DETAIL } from "./constants/path";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
@@ -17,6 +19,7 @@ function App() {
         <Route path={MY_LIST} element={<MyList />} />
         <Route path={MOVIE_DETAIL} element={<MovieDetail />} />
       </Routes>
+      <ToastContainer />
     </div>
   );
 }
