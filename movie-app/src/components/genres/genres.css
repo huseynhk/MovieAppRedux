@@ -1,44 +1,69 @@
 .genres {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    color: #67e8f9;
-    font-weight: 700;
-
+  height: 100%;
+  display: flex;
+  align-items: center;
+  color: #67e8f9;
+  font-weight: 700;
 }
 
 .genres ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  margin-top: 5vh;
+}
+@media (max-width: 900px) {
+  .genres ul {
+    width: 75%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1440px) {
+  .genres ul {
+    margin-bottom: 25vh;
+  }
 }
 
 .genres ul li {
-    cursor: pointer;
-    font-size: 14px;
-    transition: all .3s;
-    margin-bottom: 24px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s;
+  margin-bottom: 24px;
 }
-
+@media (max-width: 1440px) {
+  .genres ul li {
+    margin-bottom: 32px;
+  }
+}
+@media (max-width: 1100px) {
+  .genres ul li {
+    margin-bottom: 48px;
+    padding-right: 10px;
+  }
+}
 .genres ul li:hover {
-    color: #22d3ee;
+  color: #22d3ee;
 }
 
 .genres ul li.genre.active {
-    color: #fecaca;
-    transition: all .3s;
+  color: #d9f99d;
+  transition: all 0.3s;
 }
-
-.selectedGenre{
-    color: #fecaca;
+.genres ul li.genre.active:hover {
+  color: #bef264 !important;
+  transition: all 0.3s;
 }
-.reset{
-    color: #fecaca;
-    transition: all .3s;
-
+.selectedGenre {
+  color: #fbcfe8;
+}
+.reset {
+  color: #c7d2fe;
+  transition: all 0.3s;
 }
 .reset:hover {
-    color: #fca5a5 !important;
+  color: #a5b4fc !important;
 }

@@ -2,7 +2,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   position: relative;
   z-index: 1;
@@ -42,13 +42,6 @@
   width: 100%;
 }
 
-.movie-detail header p {
-  font-size: 32px;
-  font-weight: 700;
-  width: 70%;
-}
-
-
 .add-favorite-remove .btn {
   display: flex;
   justify-content: space-between;
@@ -57,7 +50,7 @@
   width: 100%;
 }
 
-.back{
+.back {
   width: 45% !important;
   display: flex;
   align-items: center;
@@ -66,12 +59,12 @@
   transition: all 0.5s;
   cursor: pointer;
 }
-.back:hover{
+.back:hover {
   color: #22d3ee;
   transform: scale(1.1);
 }
 
-.mtIcon{
+.mtIcon {
   margin-top: 5px;
 }
 
@@ -123,6 +116,11 @@
   align-items: center;
   font-size: 20px;
 }
+@media (max-width: 800px) {
+  .movie-title {
+    font-size: 15px;
+  }
+}
 
 .add {
   box-shadow: 0 0 0 1px #67e8f9;
@@ -149,6 +147,11 @@
   display: flex;
   font-size: 20px;
 }
+@media (max-width: 800px) {
+  .movie-detail .movie-rating {
+    font-size: 15px;
+  }
+}
 
 .movie-detail .movie-rating svg {
   color: #67e8f9;
@@ -165,11 +168,22 @@
   width: 100%;
 }
 
+@media (max-width: 1000px) {
+  .movie-detail .content {
+    flex-direction: column;
+  }
+}
+
 .movie-detail .content .left {
-  width: 40%;
+  width: 45%;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media (max-width: 1000px) {
+  .movie-detail .content .left {
+    width: 100%;
+  }
 }
 
 .movie-detail .content .right {
@@ -177,7 +191,13 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
-  padding: 10px 30px;
+  padding: 10px 20px;
+}
+@media (max-width: 1000px) {
+  .movie-detail .content .right {
+    width: 100%;
+    padding: 4px 8px;
+  }
 }
 
 .right .movie-info .movie-genres,
@@ -186,19 +206,41 @@
   display: flex;
   align-items: center;
 }
+@media (max-width: 800px) {
+  .movie-languages ul {
+    font-size: 15px;
+  }
+}
 
 .right .release-date p {
   font-size: 20px;
 }
 
+@media (max-width: 800px) {
+  .right .release-date p {
+    font-size: 15px;
+  }
+}
 .right .movie-rating p {
   font-size: 20px;
 }
-
+@media (max-width: 800px) {
+  .right .movie-rating p {
+    font-size: 15px;
+  }
+}
 .movie-detail .content .right .release-date {
   display: flex;
 }
 
+.movie-genre {
+  font-size: 20px;
+}
+@media (max-width: 800px) {
+  .movie-genre {
+    font-size: 13px;
+  }
+}
 .movie-detail .content .right .movie-overview p {
   font-size: 18px;
   border-radius: 5px;
@@ -206,10 +248,21 @@
   line-height: 22px;
   letter-spacing: 1px;
 }
-
+@media (max-width: 800px) {
+  .movie-detail .content .right .movie-overview p {
+    font-size: 13px;
+  }
+}
 .movie-detail .content .left .movie-backdrop_path {
   width: 375px;
   height: 325px;
+}
+
+@media (max-width: 1000px) {
+  .movie-detail .content .left .movie-backdrop_path {
+    width: 300px;
+    height: 275px;
+  }
 }
 
 .movie-detail .content .left .movie-backdrop_path img {
@@ -218,17 +271,23 @@
   object-fit: cover;
   border-radius: 16px;
 }
-.noVideo{
+.noVideo {
   margin-top: 50px;
   font-size: 20px;
   font-weight: 600;
   color: #67e8f9;
-
 }
 .video-item {
   width: 375px;
   height: 350px;
   margin-top: 6px;
+}
+
+@media (max-width: 800px) {
+  .video-item {
+    width: 300px;
+    height: 300px;
+  }
 }
 
 .video-item iframe {
@@ -247,7 +306,11 @@
   font-weight: 700;
   font-size: 20px;
 }
-
+@media (max-width: 800px) {
+  .movie-detail span {
+    font-size: 15px;
+  }
+}
 .movie-detail .movie-genres ul {
   display: flex;
 }

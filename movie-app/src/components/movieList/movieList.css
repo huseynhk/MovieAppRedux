@@ -24,7 +24,7 @@
 .centerDiv input {
   padding: 9px 15px;
   border-radius: 8px;
-  width: 400px;
+  width: 450px;
   border: 2px solid #a5f3fc;
   transition: all 0.3s ease;
   font-size: 16px;
@@ -32,20 +32,20 @@
 }
 @media (max-width: 1200px) {
   .centerDiv input {
-    width: 300px;
+    width: 350px;
     font-size: 14px;
   }
 }
 @media (max-width: 768px) {
   .centerDiv input {
-    width: 250px;
-    font-size: 14px;
+    width: 300px;
+    font-size: 13px;
   }
 }
 
 @media (max-width: 480px) {
   .centerDiv input {
-    width: 200px;
+    width: 250px;
     font-size: 12px;
   }
 }
@@ -67,9 +67,9 @@
 }
 
 .centerDiv h1 {
-  font-size: 32px;
+  font-size: 36px;
   font-weight: 700;
-  color: #67e8f9 ;
+  color: #bfdbfe ;
 }
 
 .movie-list .pagination-component {

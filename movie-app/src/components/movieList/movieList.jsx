@@ -11,7 +11,6 @@ import {
 import { searchMovies } from "../../redux/slices/searchSlice";
 import ReactLoading from "react-loading";
 
-const excludedGenres = [0, 10749];
 
 const MovieList = ({ selectedGenre }) => {
   const { movieList } = useSelector((store) => store.movieList);
@@ -21,12 +20,7 @@ const MovieList = ({ selectedGenre }) => {
   const [itemOffset, setItemOffset] = useState(0);
   const itemsPerPage = 7;
 
-  // const filteredMovies = searchQuery
-  //   ? searchResults
-  //   : movieList.filter(
-  //       (movie) =>
-  //         !movie.genre_ids.some((genreId) => excludedGenres.includes(genreId))
-  //     );
+
   const filteredMovies = searchQuery ? searchResults : movieList;
   const endOffset = itemOffset + itemsPerPage;
   const currentItems = filteredMovies.slice(itemOffset, endOffset);

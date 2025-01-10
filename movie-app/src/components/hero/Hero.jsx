@@ -9,7 +9,7 @@ const Hero = () => {
       <div className="hero-overlay">
         <div className="hero-content">
           <h3 className="hero-genres">action, drama, thriller, horror</h3>
-          <h1 className="hero-title">Join Us</h1>
+          <h1 className="hero-title">MyFilm</h1>
           <p className="hero-description">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat at
             cumque maiores non consequatur veniam nesciunt mollitia! Sapiente
