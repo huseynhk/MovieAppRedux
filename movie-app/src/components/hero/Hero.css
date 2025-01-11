@@ -28,14 +28,9 @@
   padding-left: 2.5rem;
 }
 
-/* @media (min-width: 1024px) {
-    .hero-content {
-      padding-left: 1rem;
-    }
-  } */
 
 .hero-genres {
-  color: #99f6e4;
+  color: #d9f99d;
   letter-spacing: 0.05em;
   font-weight: 600;
   text-transform: capitalize;
